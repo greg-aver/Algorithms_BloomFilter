@@ -37,8 +37,6 @@ public class BloomFilter
       {
         int hash1Str = hash1(str1);
         int hash2Str = hash2(str1);
-        System.out.println((filter & (1 << hash1Str)) >> hash1Str);
-        System.out.println((filter & (1 << hash2Str)) >> hash2Str);
         if (((filter & (1 << hash1Str)) >> hash1Str) == 0
                 || ((filter & (1 << hash2Str)) >> hash2Str) == 0) {
             return false;
